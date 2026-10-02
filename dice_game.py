@@ -12,7 +12,7 @@ failed_attempts = 0
 
 for throw in range(0,6):
     decision = input("Push Enter ↵ to throw the dice or \"Q\" to quit: ")
-    p_score = random.randint(0,5)
+    p_score = random.randint(0,6)
     if p_score == 0:
         failed_attempts += 1
     if decision == "Q":
@@ -30,6 +30,8 @@ print(f"Your Total score is {total_score}")
 
 if total_score >= 20:
     print(f"Congratulations {player_name}, you won a trip around the world")
+elif total_score == 36:
+    print(f"Perfect score {player_name}!, you won a free coding class and a trip around the world")
 elif 15 < total_score < 20:
     print("Good game, you won a free class with your mentor")
 else:
